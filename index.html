@@ -159,6 +159,16 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--peach-deep);outli
 a.tile{text-decoration:none;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
 a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shadow:var(--shadow)}
 .tile img{display:block;object-fit:contain}
+.orglabel{margin-bottom:14px}
+.orgs{display:grid;gap:14px;margin-bottom:var(--s5)}
+@media(min-width:780px){.orgs{grid-template-columns:1fr 1fr}}
+.org{background:var(--tile);border:1px solid var(--line);border-radius:var(--r-md);padding:30px 32px;display:flex;flex-direction:column;gap:16px;text-decoration:none;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.org:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shadow:var(--shadow)}
+.org__logo{min-height:54px;display:flex;align-items:center}
+.org__logo .logo{height:32px}
+.org__logo img{height:50px;width:auto;max-width:170px}
+.org__txt{font-size:14.8px;color:rgba(17,17,17,.68);line-height:1.56}
+.org__txt b{color:#111111;font-weight:600}
 .partners__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);margin-bottom:var(--s3)}
 .partners__head h2{font-size:1.1rem;font-weight:600}
 .partners__head span{font-size:14px;color:var(--ink-3)}
@@ -171,9 +181,6 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .plogo--swed img{max-height:30px;max-width:152px}
 .plogo--host img{max-height:26px;max-width:150px}
 .plogo__cap{position:absolute;left:0;right:0;bottom:9px;text-align:center;font-size:10.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(17,17,17,.42)}
-.organiser{margin-top:12px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:18px 24px;border-radius:var(--r-md);background:var(--surface-2)}
-.organiser .logo{height:22px}
-.organiser__txt{font-size:14.5px;color:var(--ink-2);flex:1 1 260px;min-width:0}
 
 /* section head */
 .shead{max-width:none;margin-bottom:var(--s4)}
@@ -382,12 +389,32 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 
 <section class="sec--tight">
   <div class="wrap">
+    <p class="label orglabel">Organizatoriai</p>
+    <div class="orgs">
+      <a class="org" href="https://editai.co" target="_blank" rel="noopener">
+        <span class="org__logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 32" fill="none" class="logo" role="img" aria-label="EditAI">
+        <path d="M43.2888 12.8638C41.4359 10.6951 38.5514 9.30551 35.3301 9.30551C29.7295 9.30551 25.1816 13.5165 25.1816 18.6749C25.1816 23.8544 29.7295 28.0443 35.3301 28.0443C38.5514 28.0443 41.4149 26.6547 43.2888 24.486V27.3495H46.068V4.10498H43.2888V12.8638ZM35.3511 25.2861C31.2875 25.2861 27.9609 22.3174 27.9609 18.6749C27.9609 15.0324 31.2665 12.0637 35.3511 12.0637C39.4147 12.0637 42.7413 15.0324 42.7413 18.6749C42.7203 22.3384 39.4147 25.2861 35.3511 25.2861Z"/>
+        <path d="M53.416 8.33691H50.6367V27.3705H53.416V8.33691Z"/>
+        <path d="M96.0517 4.10498H93.2725V27.3705H96.0517V4.10498Z"/>
+        <path d="M4 11.6007V19.8963C4 24.002 7.93725 27.3707 12.7798 27.3707H23.4125V24.5915H12.7798C9.45319 24.5915 6.75818 22.486 6.75818 19.8963V17.1381H19.4332V14.3589H6.77923V11.6007C6.77923 9.01093 9.47425 6.90546 12.8009 6.90546H23.4336V4.12622H12.8009C7.9583 4.12622 4 7.47393 4 11.6007Z"/>
+        <path d="M53.416 4.10498H50.6367V6.92632H53.416V4.10498Z"/>
+        <path d="M66.8484 11.1373V8.35805H62.8269V4.10498H60.0477V8.35805H56.7842V11.1373H60.0477V27.3916H62.8269V11.1373H66.8484Z"/>
+        <path d="M78.8285 4.12622C77.3336 4.12622 76.0282 4.96842 75.4808 6.27381L66.5957 27.3707H69.6065L72.8911 19.5804H84.4081L87.44 27.3707H90.4087L82.2184 6.35803C81.692 5.03158 80.3445 4.12622 78.8285 4.12622ZM74.0491 16.8223L78.0495 7.34761C78.1548 7.0739 78.4917 6.90546 78.8496 6.90546C79.2075 6.90546 79.5444 7.09495 79.6497 7.36866L83.3343 16.8223H74.0491Z"/>
+        <path d="M101.778 4V4.67375H100.473V8.06357H99.6728V4.67375H98.3674V4H101.778ZM106.179 8.08463L106.031 5.68438C106.01 5.36856 106.01 4.98957 106.01 4.54742H105.968C105.863 4.90535 105.737 5.38962 105.631 5.7686L104.894 8.02146H104.052L103.315 5.70543C103.231 5.38961 103.126 4.90535 103.042 4.54742H102.999C102.999 4.92641 102.978 5.3054 102.978 5.68438L102.831 8.08463H102.052L102.347 4.02105H103.568L104.263 6.00021C104.347 6.31603 104.431 6.61079 104.536 7.03189H104.558C104.663 6.6529 104.747 6.31602 104.831 6.02126L105.526 4.02105H106.684L107 8.08463H106.179Z"/>
+      </svg></span>
+        <span class="org__txt"><b>EditAI</b> — integruoto ugdymo platforma 1–12 klasėms. Rengia konkurso nuostatas ir misijų turinį, konsultuoja mokyklas visą laikotarpį.</span>
+      </a>
+      <a class="org" href="https://ktu.edu" target="_blank" rel="noopener">
+        <span class="org__logo"><img src="logo/logo-ktu.svg" alt="Kauno technologijos universitetas" loading="lazy"></span>
+        <span class="org__txt"><b>Kauno technologijos universitetas</b> — konkursą rengia kartu su EditAI, globoja technologinio sprendimo misiją ir atveria mLAB laboratoriją komandoms.</span>
+      </a>
+    </div>
+
     <div class="partners__head">
       <h2>Konkurso partneriai</h2>
       <span>Globoja misijas, steigia prizus ir atveria laboratorijas</span>
     </div>
     <div class="plogos">
-      <a class="tile plogo plogo--ktu" href="https://ktu.edu" target="_blank" rel="noopener"><img src="logo/logo-ktu.svg" alt="Kauno technologijos universitetas" loading="lazy"></a>
       <a class="tile plogo plogo--acme" href="https://acmegrupe.lt" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 66" fill="none" role="img" aria-label="Acme grupė">
           <path d="M104.977 52.4489C104.936 52.5716 104.916 52.6323 104.793 52.6323C104.691 52.6323 104.609 52.5914 104.466 52.4079C103.589 51.369 102.425 50.9202 100.977 50.9202C98.304 50.9202 95.8555 52.7538 95.8555 56.2179C95.8555 59.6819 98.304 61.5156 100.977 61.5156C102.426 61.5156 103.631 61.1089 104.447 60.0489C104.507 59.9671 104.548 59.946 104.63 59.946C104.712 59.946 104.752 59.9869 104.752 60.0687V60.8027C104.752 63.0641 103.477 64.3684 101.263 64.3684C99.3036 64.3684 98.191 63.4918 97.9775 62.1677H95.9362C96.151 64.4093 97.9564 65.9987 101.242 65.9987C104.589 65.9987 106.588 64.0634 106.588 60.701V51.2264H105.364L104.977 52.4489ZM101.283 59.8865C99.3446 59.8865 97.7118 58.5624 97.7118 56.2191C97.7118 53.8759 99.3446 52.5518 101.283 52.5518C103.222 52.5518 104.854 53.8759 104.854 56.2191C104.854 58.5624 103.221 59.8865 101.283 59.8865Z" fill="#15276A"/>
           <path d="M110.451 52.6336C110.41 52.7353 110.369 52.796 110.248 52.796C110.145 52.796 110.105 52.7551 110.105 52.6535V51.2277H108.269V61.8231H110.105V55.8113C110.105 53.7743 111.044 52.9795 112.819 52.9795H114.009V51.1868H113.105C111.656 51.1868 110.922 51.6145 110.453 52.6336H110.451Z" fill="#15276A"/>
@@ -403,20 +430,6 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       <a class="tile plogo plogo--ms" href="https://mokslosala.lt" target="_blank" rel="noopener"><img src="logo/logo-mokslosala.svg" alt="Mokslo sala" loading="lazy"></a>
       <a class="tile plogo plogo--swed" href="https://swedbank.lt" target="_blank" rel="noopener"><img src="logo/logo-swedbank.svg" alt="Swedbank" loading="lazy"></a>
       <a class="tile plogo plogo--host" href="https://www.hostinger.lt" target="_blank" rel="noopener"><img src="logo/logo-hostinger.svg" alt="Hostinger" loading="lazy"></a>
-    </div>
-    <div class="organiser">
-      <span class="label">Organizatorius</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 32" fill="none" class="logo" role="img" aria-label="EditAI">
-        <path d="M43.2888 12.8638C41.4359 10.6951 38.5514 9.30551 35.3301 9.30551C29.7295 9.30551 25.1816 13.5165 25.1816 18.6749C25.1816 23.8544 29.7295 28.0443 35.3301 28.0443C38.5514 28.0443 41.4149 26.6547 43.2888 24.486V27.3495H46.068V4.10498H43.2888V12.8638ZM35.3511 25.2861C31.2875 25.2861 27.9609 22.3174 27.9609 18.6749C27.9609 15.0324 31.2665 12.0637 35.3511 12.0637C39.4147 12.0637 42.7413 15.0324 42.7413 18.6749C42.7203 22.3384 39.4147 25.2861 35.3511 25.2861Z"/>
-        <path d="M53.416 8.33691H50.6367V27.3705H53.416V8.33691Z"/>
-        <path d="M96.0517 4.10498H93.2725V27.3705H96.0517V4.10498Z"/>
-        <path d="M4 11.6007V19.8963C4 24.002 7.93725 27.3707 12.7798 27.3707H23.4125V24.5915H12.7798C9.45319 24.5915 6.75818 22.486 6.75818 19.8963V17.1381H19.4332V14.3589H6.77923V11.6007C6.77923 9.01093 9.47425 6.90546 12.8009 6.90546H23.4336V4.12622H12.8009C7.9583 4.12622 4 7.47393 4 11.6007Z"/>
-        <path d="M53.416 4.10498H50.6367V6.92632H53.416V4.10498Z"/>
-        <path d="M66.8484 11.1373V8.35805H62.8269V4.10498H60.0477V8.35805H56.7842V11.1373H60.0477V27.3916H62.8269V11.1373H66.8484Z"/>
-        <path d="M78.8285 4.12622C77.3336 4.12622 76.0282 4.96842 75.4808 6.27381L66.5957 27.3707H69.6065L72.8911 19.5804H84.4081L87.44 27.3707H90.4087L82.2184 6.35803C81.692 5.03158 80.3445 4.12622 78.8285 4.12622ZM74.0491 16.8223L78.0495 7.34761C78.1548 7.0739 78.4917 6.90546 78.8496 6.90546C79.2075 6.90546 79.5444 7.09495 79.6497 7.36866L83.3343 16.8223H74.0491Z"/>
-        <path d="M101.778 4V4.67375H100.473V8.06357H99.6728V4.67375H98.3674V4H101.778ZM106.179 8.08463L106.031 5.68438C106.01 5.36856 106.01 4.98957 106.01 4.54742H105.968C105.863 4.90535 105.737 5.38962 105.631 5.7686L104.894 8.02146H104.052L103.315 5.70543C103.231 5.38961 103.126 4.90535 103.042 4.54742H102.999C102.999 4.92641 102.978 5.3054 102.978 5.68438L102.831 8.08463H102.052L102.347 4.02105H103.568L104.263 6.00021C104.347 6.31603 104.431 6.61079 104.536 7.03189H104.558C104.663 6.6529 104.747 6.31602 104.831 6.02126L105.526 4.02105H106.684L107 8.08463H106.179Z"/>
-      </svg>
-      <span class="organiser__txt">Integruoto ugdymo platforma 1–12 klasėms. Konkursą rengia ir per EditAI platformą įgyvendina EditAI komanda.</span>
     </div>
   </div>
 </section>
@@ -742,7 +755,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 <section class="sec" style="padding-top:0">
   <div class="wrap about">
     <div>
-      <p class="eyebrow">Organizatorius</p>
+      <p class="eyebrow">Apie platformą</p>
       <h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.028em">EditAI — integruoto ugdymo platforma</h2>
       <p class="lede" style="margin-top:var(--s2)">
         EditAI padeda mokytojams organizuoti integruotą ugdymą 1–12 klasėms: dirbtinio intelekto
@@ -821,7 +834,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       </svg>
         <p class="foot__tag">
           Nacionalinis mokyklų konkursas <strong>#MokausiKurti</strong> · 2026 m. spalio 12 d. – 2027 m. vasario 11 d.
-          Organizuoja UAB „EditAI“ kartu su KTU, ACME „Geri darbai“, Hostinger, „Mokslo sala“ ir Swedbank.
+          Organizatoriai — UAB „EditAI“ ir Kauno technologijos universitetas. Partneriai: ACME „Geri darbai“, Hostinger, „Mokslo sala“ ir Swedbank.
         </p>
       </div>
       <div class="contact">
@@ -852,6 +865,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
   } catch (e) {}
 })();
 </script>
+
 
 </body>
 </html>
