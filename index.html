@@ -371,7 +371,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       <a href="#dalyviai">Dalyviai</a>
       <a href="#dalyvauti">Kaip dalyvauti</a>
     </nav>
-    <a class="btn btn--peach" href="#registracija">Registruoti mokyklą</a>
+    <a class="btn btn--peach" href="#registracija">Registruoti komandą</a>
   </div>
 </header>
 
@@ -636,7 +636,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       <div class="tlrow tlrow--key">
         <div class="tlrow__d">Spalio 12 d. · 2026</div>
         <div class="tlrow__t">Konkurso startas</div>
-        <div class="tlrow__m">Paskelbiamos nuostatos ir vertinimo kriterijai, atidaroma mokyklų registracija</div>
+        <div class="tlrow__m">Paskelbiamos nuostatos ir vertinimo kriterijai, atidaroma komandų registracija</div>
       </div>
       <div class="tlrow">
         <div class="tlrow__d">Spalis–sausis</div>
@@ -742,23 +742,20 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       <h2>Sąlygos</h2>
       <p class="join__lede">
         Konkurse dalyvauja Lietuvos bendrojo ugdymo mokyklos, naudojančios EditAI platformą.
-        <b>Mokyklos registracija privaloma.</b> Užregistruokite ją iš karto, kai apsisprendžiate
-        dalyvauti — taip iš anksto žinosime, kiek komandų laukti sausį, ir galėsime suplanuoti
-        laboratorijų vizitus bei finalinį renginį. Dar nenaudojate platformos? Parašykite — ir
+        <b>Komandos registracija privaloma.</b> Dar nenaudojate platformos? Parašykite — ir
         pasidalinsime prisijungimo sąlygomis.
       </p>
       <form class="reg" id="registracija" novalidate>
-        <p class="deliver__lbl">Mokyklos registracija</p>
+        <p class="deliver__lbl">Komandos registracija</p>
         <div class="reg__grid">
           <label class="f f--wide"><span>Mokyklos pavadinimas</span><input id="r-mokykla" type="text" autocomplete="organization" placeholder="pvz. Kauno Jono Jablonskio gimnazija"></label>
           <label class="f"><span>Mokytojas koordinatorius</span><input id="r-mokytojas" type="text" autocomplete="name" placeholder="Vardas Pavardė"></label>
           <label class="f"><span>El. paštas</span><input id="r-pastas" type="email" autocomplete="email" placeholder="vardas@mokykla.lt"></label>
           <label class="f"><span>Klasė (-ės)</span><input id="r-klase" type="text" placeholder="pvz. 7a, 8b"></label>
-          <label class="f"><span>Preliminarus komandų skaičius</span><input id="r-komandos" type="number" min="1" step="1" placeholder="pvz. 3"></label>
         </div>
         <div class="reg__cta">
-          <button class="btn btn--peach" type="submit">Registruoti mokyklą</button>
-          <span class="reg__note">Registracija nieko neįpareigoja — komandų skaičių vėliau galėsite patikslinti.</span>
+          <button class="btn btn--peach" type="submit">Registruoti komandą</button>
+          <span class="reg__note">Vienai komandai — viena registracija. Jei mokykloje dalyvaus kelios komandos, užregistruokite kiekvieną atskirai.</span>
         </div>
         <div class="reg__done" id="r-done" hidden>
           <h4 id="r-done-h">Beveik viskas</h4>
@@ -769,7 +766,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       </form>
 
       <ol class="steps8">
-        <li><span class="n">01</span><span><b>Užregistruokite mokyklą</b> viršuje esančia forma: mokykla, koordinuojantis mokytojas, el. paštas, klasės ir preliminarus komandų skaičius.</span></li>
+        <li><span class="n">01</span><span><b>Užregistruokite komandą</b> viršuje esančia forma: mokykla, koordinuojantis mokytojas, el. paštas ir klasė.</span></li>
         <li><span class="n">02</span><span>Mokytojas <b>suburia komandą</b> — save ir savo mokinius. Skatiname mokytojus bendradarbiauti: integruotam projektui komandą gali sudaryti <b>keli skirtingų dalykų mokytojai</b>.</span></li>
         <li><span class="n">03</span><span>Mokytojas su komanda EditAI platformoje <b>susikuria projektą</b>, suplanuoja jo įgyvendinimą pagal šešias misijas ir įkelia į projektų kalendorių.</span></li>
         <li><span class="n">04</span><span>Komanda <b>įgyvendina visas šešias misijas</b> — spalį–sausį, sau tinkamu tempu.</span></li>
@@ -909,7 +906,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       e.preventDefault();
       var v=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
       var mokykla=v('r-mokykla'), mokytojas=v('r-mokytojas'), pastas=v('r-pastas'),
-          klase=v('r-klase'), komandos=v('r-komandos');
+          klase=v('r-klase');
       var trukstama=[];
       if(!mokykla) trukstama.push('mokyklos pavadinimo');
       if(!mokytojas) trukstama.push('mokytojo vardo ir pavardės');
@@ -926,14 +923,13 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       var tekstas='Mokykla: '+mokykla+'\n'+
                   'Mokytojas koordinatorius: '+mokytojas+'\n'+
                   'El. paštas: '+pastas+'\n'+
-                  'Klasė (-ės): '+(klase||'—')+'\n'+
-                  'Preliminarus komandų skaičius: '+(komandos||'—');
+                  'Klasė (-ės): '+(klase||'—');
       h.textContent='Beveik viskas';
       pp.textContent='Paspauskite mygtuką — atsidarys paruoštas laiškas, tereikės jį išsiųsti. Jei laiško programa neatsidaro, nukopijuokite tekstą žemiau ir atsiųskite adresu mokausikurti@editai.co.';
       document.getElementById('r-pre').textContent=tekstas;
       var a=document.getElementById('r-send');
       a.hidden=false;
-      a.href='mailto:mokausikurti@editai.co?subject='+encodeURIComponent('#MokausiKurti 2026 – mokyklos registracija')+'&body='+encodeURIComponent(tekstas+'\n');
+      a.href='mailto:mokausikurti@editai.co?subject='+encodeURIComponent('#MokausiKurti 2026 – komandos registracija')+'&body='+encodeURIComponent(tekstas+'\n');
       done.hidden=false;
       done.scrollIntoView({block:'nearest'});
     });
