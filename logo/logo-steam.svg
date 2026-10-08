@@ -1,0 +1,20 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 333.5917">
+  <g>
+    <g id="type">
+      <rect id="type_PathItem_" data-name="type &lt;PathItem&gt;" x="155.9901" y="222.668" width="364.1542" height="14.6544" style="fill: #00d99b"/>
+      <rect id="type_PathItem_2" data-name="type &lt;PathItem&gt;" x="66.7037" y="99.7791" width="220.4736" height="14.6544" transform="matrix(0.309, -0.9511, 0.9511, 0.309, 20.4021, 242.293)" style="fill: #ff306d"/>
+      <rect id="type_PathItem_3" data-name="type &lt;PathItem&gt;" x="64.4678" y="120.9773" width="14.6544" height="123.2761" transform="translate(-118.1465 133.3699) rotate(-54.0029)" style="fill: #008cb5"/>
+      <rect id="type_PathItem_4" data-name="type &lt;PathItem&gt;" x="-9.5489" y="276.4619" width="145.0697" height="14.6544" transform="matrix(0.809, -0.5878, 0.5878, 0.809, -154.7926, 91.2379)" style="fill: #ffce4e"/>
+      <rect id="type_PathItem_5" data-name="type &lt;PathItem&gt;" x="149.0885" y="245.8966" width="14.6544" height="87.5747" transform="translate(-81.885 62.5377) rotate(-18.0059)" style="fill: #003b4e"/>
+    </g>
+    <g id="logoMark">
+      <path id="logoMark_CompoundPathItem_" data-name="logoMark &lt;CompoundPathItem&gt;" d="M247.6629,168.9658l11.0922-13.713c9.7042,8.782,20.9517,14.3293,34.8151,14.3293,13.0967,0,19.8743-6.4718,19.8743-14.0211,0-8.78-7.5493-11.7062-24.4946-15.7126-21.8762-5.0838-37.1277-11.4-37.1277-31.2722,0-18.4862,15.7149-32.0439,38.0522-32.0439A58.8941,58.8941,0,0,1,329.9287,91.32l-10.4758,14.174c-9.2431-8.01-19.8743-12.4778-30.35-12.4778-10.6287,0-17.87,6.47-17.87,13.8635,0,8.6267,7.8575,11.7085,24.65,15.56,22.0292,4.931,36.8172,12.0168,36.8172,31.2747,0,18.9473-14.48,32.35-39.7461,32.35C274.7758,186.064,259.3715,179.9027,247.6629,168.9658Z"/>
+      <path id="logoMark_CompoundPathItem_2" data-name="logoMark &lt;CompoundPathItem&gt;" d="M375.6565,96.0959h-33.893V78.5343h86.8886V96.0959h-33.893V184.37H375.6565Z"/>
+      <path id="logoMark_CompoundPathItem_3" data-name="logoMark &lt;CompoundPathItem&gt;" d="M460.4339,96.0959V121.67h54.6894V139.232H460.4339v27.5765h60.39V184.37H441.176V78.5343h79.6475V96.0959Z"/>
+      <polygon id="logoMark_PathItem_" data-name="logoMark &lt;PathItem&gt;" points="640.45 184.367 619.181 184.367 608.67 159.319 573.036 174.204 566.277 158.002 601.886 143.118 585.535 104.155 552.014 184.367 530.619 184.367 574.825 78.535 596.245 78.535 640.45 184.367"/>
+      <path id="logoMark_CompoundPathItem_4" data-name="logoMark &lt;CompoundPathItem&gt;" d="M652.5833,78.5343h19.2554l34.8176,64.5488,34.97-64.5488h19.1026V184.37H741.6267V113.66l-34.97,64.5489L671.8387,113.66v70.71H652.5833Z"/>
+      <path id="logoMark_CompoundPathItem_5" data-name="logoMark &lt;CompoundPathItem&gt;" d="M828.7966,111.7128v6.6H801.1789V78.5357h7.1781v33.1771Z"/>
+      <path id="logoMark_CompoundPathItem_6" data-name="logoMark &lt;CompoundPathItem&gt;" d="M844.0821,85.1362H831.3446v-6.6H864v6.6H851.2626v33.1771h-7.1805Z"/>
+    </g>
+  </g>
+</svg>
