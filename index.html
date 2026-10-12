@@ -298,6 +298,9 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .reg__note{font-size:13px;color:rgba(17,17,17,.6);line-height:1.5;flex:1 1 240px;min-width:0}
 .reg__done{margin-top:20px;border-top:1px solid rgba(17,17,17,.14);padding-top:20px}
 .reg__done h4{font-size:1.02rem;font-weight:600;color:#111111;margin:0 0 8px}
+.reg__ok{display:flex;gap:14px;align-items:flex-start}
+.reg__tick{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#BCCAB1;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#111111;line-height:1}
+.reg__ok h4{font-size:1.14rem;margin:2px 0 6px}
 .reg__done p{font-size:14px;color:rgba(17,17,17,.68);line-height:1.5}
 .reg__pre{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;color:#111111;background:#FFFFFF;border:1px solid rgba(17,17,17,.14);border-radius:10px;padding:14px 16px;margin:12px 0 16px;white-space:pre-wrap;word-break:break-word}
 
@@ -763,6 +766,13 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
           <div class="reg__pre" id="r-pre"></div>
           <a class="btn btn--peach" id="r-send" href="#">Išsiųsti laišką</a>
         </div>
+        <div class="reg__done reg__ok" id="r-ok" hidden>
+          <span class="reg__tick" aria-hidden="true">✓</span>
+          <div>
+            <h4>Registracija sėkminga</h4>
+            <p>Komandą gavome. Patvirtinimą atsiųsime nurodytu el. paštu per 2 darbo dienas. Jei mokykloje dalyvaus daugiau komandų, užpildykite formą dar kartą.</p>
+          </div>
+        </div>
       </form>
 
       <ol class="steps8">
@@ -929,9 +939,22 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       var a=document.getElementById('r-send');
       a.hidden=false;
       a.href='mailto:mokausikurti@editai.co?subject='+encodeURIComponent('#MokausiKurti 2026 – komandos registracija')+'&body='+encodeURIComponent(tekstas+'\n');
+      document.getElementById('r-ok').hidden=true;
       done.hidden=false;
       done.scrollIntoView({block:'nearest'});
     });
+    var send=document.getElementById('r-send');
+    if(send){
+      send.addEventListener('click', function(){
+        setTimeout(function(){
+          document.getElementById('r-done').hidden=true;
+          var ok=document.getElementById('r-ok');
+          ok.hidden=false;
+          ok.scrollIntoView({block:'nearest'});
+          f.reset();
+        }, 600);
+      });
+    }
   }
 })();
 (function(){
