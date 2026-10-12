@@ -286,23 +286,13 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 
 /* registration */
 .reg{background:var(--cream);border-radius:var(--r-md);padding:28px 30px;margin-top:var(--s4)}
-.reg__grid{display:grid;gap:16px;margin-top:18px}
-@media(min-width:720px){.reg__grid{grid-template-columns:1fr 1fr}}
-.f{display:flex;flex-direction:column;gap:7px}
-.f--wide{grid-column:1/-1}
-.f span{font-size:13px;font-weight:500;color:rgba(17,17,17,.66)}
-.f input{font-family:var(--f);font-size:16px;font-weight:400;color:#111111;background:#FFFFFF;border:1px solid rgba(17,17,17,.18);border-radius:10px;padding:13px 15px;width:100%}
-.f input:focus{outline:2px solid var(--peach-deep);outline-offset:1px;border-color:transparent}
-.f input::placeholder{color:rgba(17,17,17,.38)}
-.reg__cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}
-.reg__note{font-size:13px;color:rgba(17,17,17,.6);line-height:1.5;flex:1 1 240px;min-width:0}
-.reg__done{margin-top:20px;border-top:1px solid rgba(17,17,17,.14);padding-top:20px}
-.reg__done h4{font-size:1.02rem;font-weight:600;color:#111111;margin:0 0 8px}
-.reg__ok{display:flex;gap:14px;align-items:flex-start}
-.reg__tick{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#BCCAB1;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700;color:#111111;line-height:1}
-.reg__ok h4{font-size:1.14rem;margin:2px 0 6px}
-.reg__done p{font-size:14px;color:rgba(17,17,17,.68);line-height:1.5}
-.reg__pre{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:12.5px;line-height:1.6;color:#111111;background:#FFFFFF;border:1px solid rgba(17,17,17,.14);border-radius:10px;padding:14px 16px;margin:12px 0 16px;white-space:pre-wrap;word-break:break-word}
+#registracija{scroll-margin-top:88px}
+.reg__lead{font-size:14.8px;color:rgba(17,17,17,.7);line-height:1.56;margin-top:6px;max-width:72ch}
+.reg__frame{margin-top:18px;border-radius:12px;overflow:hidden;background:#FFFFFF;border:1px solid rgba(17,17,17,.14)}
+.reg__frame iframe{display:block;width:100%;height:640px;border:0}
+@media(max-width:700px){.reg__frame iframe{height:780px}}
+.reg__fallback{font-size:13.5px;color:rgba(17,17,17,.62);margin-top:14px}
+.reg__fallback a{color:#A8542A;font-weight:500}
 
 /* participants */
 .rules{list-style:none;margin:0;padding:0;display:grid;border-top:1px solid var(--line)}
@@ -748,32 +738,14 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
         <b>Komandos registracija privaloma.</b> Dar nenaudojate platformos? Parašykite — ir
         pasidalinsime prisijungimo sąlygomis.
       </p>
-      <form class="reg" id="registracija" novalidate>
+      <div class="reg" id="registracija">
         <p class="deliver__lbl">Komandos registracija</p>
-        <div class="reg__grid">
-          <label class="f f--wide"><span>Mokyklos pavadinimas</span><input id="r-mokykla" type="text" autocomplete="organization" placeholder="pvz. Kauno Jono Jablonskio gimnazija"></label>
-          <label class="f"><span>Mokytojas koordinatorius</span><input id="r-mokytojas" type="text" autocomplete="name" placeholder="Vardas Pavardė"></label>
-          <label class="f"><span>El. paštas</span><input id="r-pastas" type="email" autocomplete="email" placeholder="vardas@mokykla.lt"></label>
-          <label class="f"><span>Klasė (-ės)</span><input id="r-klase" type="text" placeholder="pvz. 7a, 8b"></label>
+        <p class="reg__lead">Vienai komandai — viena registracija. Jei mokykloje dalyvaus kelios komandos, užpildykite formą kiekvienai atskirai.</p>
+        <div class="reg__frame">
+          <iframe src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=h4azFKWeIkaIYnJHb3KFf3YUlfCIWP9Mr4qKJPVEVF5UMkJCNlg1MlBQVVBBODZaWkg1R01SWFNHSS4u&amp;embed=true" title="#MokausiKurti komandos registracijos forma" loading="lazy" allowfullscreen></iframe>
         </div>
-        <div class="reg__cta">
-          <button class="btn btn--peach" type="submit">Registruoti komandą</button>
-          <span class="reg__note">Vienai komandai — viena registracija. Jei mokykloje dalyvaus kelios komandos, užregistruokite kiekvieną atskirai.</span>
-        </div>
-        <div class="reg__done" id="r-done" hidden>
-          <h4 id="r-done-h">Beveik viskas</h4>
-          <p id="r-done-p">Paspauskite mygtuką — atsidarys paruoštas laiškas, tereikės jį išsiųsti. Jei laiško programa neatsidaro, nukopijuokite tekstą ir atsiųskite adresu mokausikurti@editai.co.</p>
-          <div class="reg__pre" id="r-pre"></div>
-          <a class="btn btn--peach" id="r-send" href="#">Išsiųsti laišką</a>
-        </div>
-        <div class="reg__done reg__ok" id="r-ok" hidden>
-          <span class="reg__tick" aria-hidden="true">✓</span>
-          <div>
-            <h4>Registracija sėkminga</h4>
-            <p>Komandą gavome. Patvirtinimą atsiųsime nurodytu el. paštu per 2 darbo dienas. Jei mokykloje dalyvaus daugiau komandų, užpildykite formą dar kartą.</p>
-          </div>
-        </div>
-      </form>
+        <p class="reg__fallback">Forma neatsidaro? <a href="https://forms.cloud.microsoft/e/tba41b09iF" target="_blank" rel="noopener">Atidarykite ją atskirame lange</a></p>
+      </div>
 
       <ol class="steps8">
         <li><span class="n">01</span><span><b>Suburkite komandą ir ją užregistruokite</b> viršuje esančia forma. Komandą sudaro mokytojas ir jo mokiniai; skatiname mokytojus bendradarbiauti — integruotam projektui komandą gali sudaryti <b>keli skirtingų dalykų mokytojai</b>.</span></li>
@@ -908,55 +880,6 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 </footer>
 
 <script>
-(function(){
-  var f=document.getElementById('registracija');
-  if(f){
-    f.addEventListener('submit', function(e){
-      e.preventDefault();
-      var v=function(id){var el=document.getElementById(id);return el?el.value.trim():'';};
-      var mokykla=v('r-mokykla'), mokytojas=v('r-mokytojas'), pastas=v('r-pastas'),
-          klase=v('r-klase');
-      var trukstama=[];
-      if(!mokykla) trukstama.push('mokyklos pavadinimo');
-      if(!mokytojas) trukstama.push('mokytojo vardo ir pavardės');
-      if(!pastas) trukstama.push('el. pašto');
-      var done=document.getElementById('r-done');
-      var h=document.getElementById('r-done-h'), pp=document.getElementById('r-done-p');
-      if(trukstama.length){
-        h.textContent='Trūksta '+trukstama.join(', ');
-        pp.textContent='Užpildykite šiuos laukus ir spauskite dar kartą.';
-        document.getElementById('r-pre').textContent='';
-        document.getElementById('r-send').hidden=true;
-        done.hidden=false; return;
-      }
-      var tekstas='Mokykla: '+mokykla+'\n'+
-                  'Mokytojas koordinatorius: '+mokytojas+'\n'+
-                  'El. paštas: '+pastas+'\n'+
-                  'Klasė (-ės): '+(klase||'—');
-      h.textContent='Beveik viskas';
-      pp.textContent='Paspauskite mygtuką — atsidarys paruoštas laiškas, tereikės jį išsiųsti. Jei laiško programa neatsidaro, nukopijuokite tekstą žemiau ir atsiųskite adresu mokausikurti@editai.co.';
-      document.getElementById('r-pre').textContent=tekstas;
-      var a=document.getElementById('r-send');
-      a.hidden=false;
-      a.href='mailto:mokausikurti@editai.co?subject='+encodeURIComponent('#MokausiKurti 2026 – komandos registracija')+'&body='+encodeURIComponent(tekstas+'\n');
-      document.getElementById('r-ok').hidden=true;
-      done.hidden=false;
-      done.scrollIntoView({block:'nearest'});
-    });
-    var send=document.getElementById('r-send');
-    if(send){
-      send.addEventListener('click', function(){
-        setTimeout(function(){
-          document.getElementById('r-done').hidden=true;
-          var ok=document.getElementById('r-ok');
-          ok.hidden=false;
-          ok.scrollIntoView({block:'nearest'});
-          f.reset();
-        }, 600);
-      });
-    }
-  }
-})();
 (function(){
   var v = document.getElementById('vid2025');
   if (!v) return;
