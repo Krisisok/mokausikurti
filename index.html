@@ -233,10 +233,12 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .labs{display:grid;gap:14px}
 @media(min-width:780px){.labs{grid-template-columns:1fr 1fr}}
 .lab{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:28px 26px;display:flex;flex-direction:column;gap:15px}
-.lab__logo{display:flex;align-items:center;justify-content:center;background:var(--tile);border:1px solid var(--line);border-radius:10px;padding:10px 16px;align-self:flex-start;min-height:58px}
+.lab__logo{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--tile);border:1px solid var(--line);border-radius:10px;padding:10px 16px;align-self:flex-start;min-height:58px}
+.lab__div{width:1px;height:28px;background:rgba(17,17,17,.2);flex:0 0 auto}
 .lab__logo img{display:block;width:auto;height:auto;max-width:130px}
 .lab__logo--ktu img{height:34px}
 .lab__logo--ms img{height:44px}
+.lab__logo--ms img.lab__steam{height:26px}
 .lab h3{font-size:1.2rem;font-weight:600;letter-spacing:-.02em}
 .lab p{font-size:15.5px;color:var(--ink-2);line-height:1.56}
 
@@ -570,8 +572,8 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
            mokytoju ir dirba prie savo sprendimo su universiteto įranga.</p>
       </article>
       <article class="lab">
-        <div class="lab__logo lab__logo--ms"><img src="logo/logo-mokslosala.svg" alt="Mokslo sala" loading="lazy"></div>
-        <h3>„Mokslo salos“ STEAM laboratorijos</h3>
+        <div class="lab__logo lab__logo--ms"><img src="logo/logo-mokslosala.svg" alt="Mokslo sala" loading="lazy"><span class="lab__div" aria-hidden="true"></span><img class="lab__steam" src="logo/logo-steam.svg" alt="Kauno metodinis STEAM centras" loading="lazy"></div>
+        <h3>„Mokslo salos“ Kauno metodinio STEAM centro laboratorijos</h3>
         <p>Interaktyvios STEAM erdvės, planetariumas ir laboratorijų edukacijos Kaune. Čia veikia ir
            Kauno STEAM centras, o 2027 m. vasario 23 d. vyks finalinis konkurso renginys.</p>
       </article>
