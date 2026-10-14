@@ -165,6 +165,12 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .organiser .logo{height:23px}
 .organiser__txt{font-size:14.8px;color:var(--ink-2);flex:1 1 320px;min-width:0;line-height:1.55}
 .organiser__txt b{color:var(--ink);font-weight:600}
+.orglabel{margin-bottom:14px}
+.mainpartner{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3) var(--s4);margin-bottom:var(--s5)}
+.mainpartner__logo{flex:0 0 auto;min-height:116px;min-width:230px;padding:26px 28px}
+.mainpartner__logo img{height:52px;width:auto;max-width:160px}
+.mainpartner__txt{flex:1 1 400px;min-width:0;font-size:15.5px;color:var(--ink-2);line-height:1.58}
+.mainpartner__txt b{color:var(--ink);font-weight:600}
 .partners__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);margin-bottom:var(--s3)}
 .partners__head h2{font-size:1.1rem;font-weight:600}
 .partners__head span{font-size:14px;color:var(--ink-3)}
@@ -397,12 +403,17 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 
 <section class="sec--tight">
   <div class="wrap">
+    <p class="label orglabel">Pagrindinis partneris</p>
+    <div class="mainpartner">
+      <a class="tile mainpartner__logo" href="https://ktu.edu" target="_blank" rel="noopener"><img src="logo/logo-ktu.svg" alt="Kauno technologijos universitetas" loading="lazy"></a>
+      <p class="mainpartner__txt">KTU prisideda prie „EditAI“ organizuojamo konkurso kaip <b>mokslo partneris</b>: globoja technologinių sprendimų kūrimo misiją ir suteikia komandoms galimybę naudotis KTU „M-Lab“ įsikūrusiu Pradedančiųjų tyrėjų prototipavimo centru „YOUNG_Lab“.</p>
+    </div>
+
     <div class="partners__head">
       <h2>Konkurso partneriai</h2>
       <span>Globoja misijas, steigia prizus ir atveria laboratorijas</span>
     </div>
     <div class="plogos">
-      <a class="tile plogo plogo--ktu" href="https://ktu.edu" target="_blank" rel="noopener"><img src="logo/logo-ktu.svg" alt="Kauno technologijos universitetas" loading="lazy"></a>
       <a class="tile plogo plogo--acme" href="https://acmegrupe.lt" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 66" fill="none" role="img" aria-label="Acme grupė">
           <path d="M104.977 52.4489C104.936 52.5716 104.916 52.6323 104.793 52.6323C104.691 52.6323 104.609 52.5914 104.466 52.4079C103.589 51.369 102.425 50.9202 100.977 50.9202C98.304 50.9202 95.8555 52.7538 95.8555 56.2179C95.8555 59.6819 98.304 61.5156 100.977 61.5156C102.426 61.5156 103.631 61.1089 104.447 60.0489C104.507 59.9671 104.548 59.946 104.63 59.946C104.712 59.946 104.752 59.9869 104.752 60.0687V60.8027C104.752 63.0641 103.477 64.3684 101.263 64.3684C99.3036 64.3684 98.191 63.4918 97.9775 62.1677H95.9362C96.151 64.4093 97.9564 65.9987 101.242 65.9987C104.589 65.9987 106.588 64.0634 106.588 60.701V51.2264H105.364L104.977 52.4489ZM101.283 59.8865C99.3446 59.8865 97.7118 58.5624 97.7118 56.2191C97.7118 53.8759 99.3446 52.5518 101.283 52.5518C103.222 52.5518 104.854 53.8759 104.854 56.2191C104.854 58.5624 103.221 59.8865 101.283 59.8865Z" fill="#004A4E"/>
           <path d="M110.451 52.6336C110.41 52.7353 110.369 52.796 110.248 52.796C110.145 52.796 110.105 52.7551 110.105 52.6535V51.2277H108.269V61.8231H110.105V55.8113C110.105 53.7743 111.044 52.9795 112.819 52.9795H114.009V51.1868H113.105C111.656 51.1868 110.922 51.6145 110.453 52.6336H110.451Z" fill="#004A4E"/>
@@ -495,7 +506,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
         <div class="step__hd" style="background:#C0D9EA"><span class="step__n">02</span><h3 class="step__ttl">Technologinis sprendimas</h3></div>
         <div class="step__body">
           <span class="mission">KTU technologijų misija</span>
-          <p class="step__txt">Tinka viskas, kas sprendimą paverčia apčiuopiamu: popierinis ar 3D spausdintas maketas, veikiantis mechanizmas, elektronikos grandinė ar jutiklis, programėlė, žaidimas, robotas, dirbtinio intelekto sprendimo koncepcija ar duomenų modelis. Pasidaryti ir išbandyti galima KTU mLAB ar kitoje laboratorijoje.</p>
+          <p class="step__txt">Pasirinktai problemai spręsti komandos turės sukurti konkretų, praktiškai pritaikomą sprendimą. Tai gali būti popierinis ar 3D spausdintas maketas, veikiantis mechanizmas, elektronikos grandinė ar jutiklis, programėlė, žaidimas, robotas, dirbtinio intelekto sprendimo koncepcija ar duomenų modelis. Prototipus kurti ir išbandyti komandos galės KTU „YOUNG_Lab“ ar kitose laboratorijose.</p>
         </div>
       </article>
 
@@ -510,7 +521,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       <article class="step">
         <div class="step__hd" style="background:#DFD7A6"><span class="step__n">04</span><h3 class="step__ttl">Verslo modelis</h3></div>
         <div class="step__body">
-          <span class="mission">Swedbank verslo misija</span>
+          <span class="mission">„Swedbank“ verslo misija</span>
           <p class="step__txt">Kam sprendimas reikalingas, kiek kainuotų jį sukurti ir kas galėtų prisidėti? Vertė gali būti ir finansinė, ir socialinė — svarbu, kad komanda aiškiai parodytų, kokią naudą ir kam jos sprendimas duoda.</p>
         </div>
       </article>
@@ -553,9 +564,10 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
     <div class="labs">
       <article class="lab">
         <div class="lab__logo lab__logo--ktu"><img src="logo/logo-ktu.svg" alt="KTU" loading="lazy"></div>
-        <h3>KTU mLAB</h3>
-        <p>Prototipų gamyba, elektronika ir jutikliai, inžinierių konsultacijos. Komandos atvyksta su
-           mokytoju ir dirba prie savo sprendimo su universiteto įranga.</p>
+        <h3>KTU „YOUNG_Lab“</h3>
+        <p>Prototipų kūrimas ir gamyba, darbas su elektronika ir jutikliais bei KTU ekspertų ir
+           inžinierių konsultacijos. Komandos kartu su mokytoju atvyksta į universitetą, kur naudodamosi
+           laboratorijų įranga ir padedamos KTU specialistų kuria bei tobulina savo sprendimus.</p>
       </article>
       <article class="lab">
         <div class="lab__logo lab__logo--ms"><img src="logo/logo-mokslosala.svg" alt="Mokslo sala" loading="lazy"><span class="lab__div" aria-hidden="true"></span><img class="lab__steam" src="logo/logo-steam.png" alt="Mokslo salos Kauno metodinis STEAM centras" loading="lazy"></div>
@@ -688,7 +700,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
     <div class="val">
       <div class="vcard"><span class="vdot" style="background:#BCCAB1"></span><h3>Paruoštas tarpdalykinio ugdymo formatas</h3><p>Šešios misijos su aprašais, užduotimis ir vertinimo kriterijais trims amžiaus grupėms — nereikia kurti projekto nuo nulio.</p></div>
       <div class="vcard"><span class="vdot" style="background:#C0D9EA"></span><h3>Mokytojų bendradarbiavimas tarp dalykų</h3><p>Vienas komandos projektas sujungia gamtos mokslus, technologijas, informatiką, matematiką, kalbas ir socialinius mokslus.</p></div>
-      <div class="vcard"><span class="vdot" style="background:#E9D6EC"></span><h3>Apsilankymas universitete ir mokslo centre</h3><p>Vizitai į KTU mLAB ir Mokslo salos STEAM laboratorijas, inžinierių ir ekspertų konsultacijos jūsų mokiniams.</p></div>
+      <div class="vcard"><span class="vdot" style="background:#E9D6EC"></span><h3>Apsilankymas universitete ir mokslo centre</h3><p>Vizitai į KTU „M-Lab“ įsikūrusio Pradedančiųjų tyrėjų prototipavimo centrą „YOUNG_Lab“ bei Mokslo salos STEAM laboratorijas, inžinierių bei ekspertų konsultacijos jūsų mokiniams.</p></div>
       <div class="vcard"><span class="vdot" style="background:#DFD7A6"></span><h3>Matomumas mokyklai</h3><p>Mokinių darbai, istorijos ir komandų svetainės — konkurso komunikacijoje nuo spalio iki vasario, o geriausios komandos pristatomos finaliniame renginyje.</p></div>
       <div class="vcard"><span class="vdot" style="background:#B2CED0"></span><h3>Hostinger įrankiai komandoms</h3><p>Konkurso laikotarpiu Hostinger suteikia savo įrankius, kad kiekviena komanda galėtų sukurti ir publikuoti savo sprendimo svetainę.</p></div>
       <div class="vcard"><span class="vdot" style="background:#CBB8E1"></span><h3>Konsultacijos visą laikotarpį</h3><p>EditAI komanda konsultuoja mokyklas nuo starto iki finalo ir teikia techninį palaikymą platformoje.</p></div>
@@ -739,8 +751,8 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
         <li><span class="n">01</span><span><b>Suburkite komandą ir ją užregistruokite</b> viršuje esančia forma. Komandą sudaro mokytojas ir jo mokiniai; skatiname mokytojus bendradarbiauti — integruotam projektui komandą gali sudaryti <b>keli skirtingų dalykų mokytojai</b>.</span></li>
         <li><span class="n">02</span><span>Mokytojas su komanda EditAI platformoje <b>susikuria projektą</b>, suplanuoja jo įgyvendinimą pagal šešias misijas ir įkelia į projektų kalendorių.</span></li>
         <li><span class="n">03</span><span>Komanda <b>įgyvendina visas šešias misijas</b> — spalį–sausį, sau tinkamu tempu.</span></li>
-        <li><span class="n">04</span><span>Prireikus komanda <b>registruojasi vizitui</b> į KTU mLAB arba Mokslo salos STEAM laboratoriją ir ten gamina prototipą bei testuoja technologijas.</span></li>
-        <li><span class="n">05</span><span>Įgyvendinęs projektą, mokytojas ar mokyklos atstovas <b>pasidalija rezultatu mokyklos socialiniuose tinkluose</b>, pažymėdamas <b>#MokausiKurti</b>, @EditAIplatforma, @KTU, @Acme grupė, @Hostinger, @mokslo_sala ir @Swedbank.</span></li>
+        <li><span class="n">04</span><span>Jei komandai prireikia papildomos įrangos ar specialistų pagalbos, ji <b>registruojasi vizitui</b> į KTU „M-Lab“ įsikūrusį Pradedančiųjų tyrėjų prototipavimo centrą „YOUNG_Lab“ arba Mokslo salos STEAM laboratorijas, kur galės kurti ir išbandyti prototipus bei technologinius sprendimus.</span></li>
+        <li><span class="n">05</span><span>Įgyvendinęs projektą, mokytojas ar mokyklos atstovas <b>pasidalija rezultatu mokyklos socialiniuose tinkluose</b>, pažymėdamas <b>#MokausiKurti</b>, @EditAIplatforma, @KTU, @Acme_grupė, @Hostinger, @mokslo_sala ir @Swedbank.</span></li>
         <li><span class="n">06</span><span>Komanda <b>nufilmuoja trumpą video</b> apie savo kelią per šešias misijas.</span></li>
         <li><span class="n">07</span><span>Mokytojas <b>atsiunčia socialinių tinklų įrašo nuorodą ir video</b> el. paštu mokausikurti@editai.co iki 2027 m. sausio 15 d. ir per 2 darbo dienas gauna dalyvavimo patvirtinimą.</span></li>
         <li><span class="n">08</span><span>Komanda laukia rezultatų: <b>laimėtojai informuojami sausio 29 d.</b>, finalinis renginys — vasario 23 d.</span></li>
@@ -849,7 +861,7 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
       </svg>
         <p class="foot__tag">
           Nacionalinis mokyklų konkursas <strong>#MokausiKurti</strong> · 2026 m. spalio 19 d. – 2027 m. vasario 23 d.
-          Organizatorius — UAB „EditAI“. Partneriai: KTU, „Acme grupė“, Hostinger, Mokslo sala ir Swedbank.
+          Organizatorius — UAB „EditAI“. Pagrindinis partneris — KTU. Partneriai: „Acme grupė“, „Hostinger“, Mokslo sala ir „Swedbank“.
         </p>
       </div>
       <div class="contact">
