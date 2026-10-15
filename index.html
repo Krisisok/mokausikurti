@@ -168,8 +168,10 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .partners__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);margin-bottom:var(--s3)}
 .partners__head h2{font-size:1.1rem;font-weight:600}
 .partners__head span{font-size:14px;color:var(--ink-3)}
-.plogos{display:flex;flex-wrap:wrap;gap:12px}
-.plogo{flex:1 1 190px;min-height:116px;position:relative;padding:26px 20px}
+.plogos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:640px){.plogos{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1040px){.plogos{grid-template-columns:repeat(6,1fr)}}
+.plogo{min-height:116px;position:relative;padding:24px 16px}
 .plogo img,.plogo svg{max-height:44px;max-width:150px;width:auto;height:auto}
 .plogo--ktu img{max-height:58px;max-width:62px}
 .plogo--acme svg{max-height:48px;max-width:120px}
