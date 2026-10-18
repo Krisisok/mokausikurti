@@ -160,6 +160,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--peach-deep);outli
 .tile{background:var(--tile);border:1px solid var(--line);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;padding:20px}
 a.tile{text-decoration:none;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
 a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shadow:var(--shadow)}
+a.plogo:hover{transform:none;box-shadow:none;opacity:.6}
 .tile img{display:block;object-fit:contain}
 .organiser{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:20px 24px;border-radius:var(--r-md);background:var(--surface-2)}
 .organiser .logo{height:23px}
@@ -168,17 +169,16 @@ a.tile:hover{border-color:var(--line-strong);transform:translateY(-2px);box-shad
 .partners__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s2) var(--s3);margin-bottom:var(--s3)}
 .partners__head h2{font-size:1.1rem;font-weight:600}
 .partners__head span{font-size:14px;color:var(--ink-3)}
-.plogos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media(min-width:640px){.plogos{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:1040px){.plogos{grid-template-columns:repeat(6,1fr)}}
-.plogo{min-height:116px;position:relative;padding:24px 16px}
-.plogo img,.plogo svg{max-height:44px;max-width:150px;width:auto;height:auto}
-.plogo--ktu img{max-height:58px;max-width:62px}
-.plogo--acme svg{max-height:48px;max-width:120px}
-.plogo--ms img{max-height:58px;max-width:112px}
-.plogo--swed img{max-height:30px;max-width:152px}
-.plogo--host img{max-height:26px;max-width:150px}
-.plogo--steam img{max-height:30px;max-width:150px}
+.plogos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:34px 48px;padding:8px 0}
+@media(min-width:940px){.plogos{justify-content:space-between;gap:28px;padding:10px 4px}}
+.plogo{background:transparent;border:0;border-radius:0;padding:0;min-height:0;flex:0 0 auto;display:flex;align-items:center;justify-content:center;transition:opacity .15s ease}
+.plogo img,.plogo svg{display:block;width:auto;height:auto}
+.plogo--ktu img{height:56px}
+.plogo--acme svg{height:46px}
+.plogo--ms img{height:52px}
+.plogo--steam img{height:30px}
+.plogo--swed img{height:27px}
+.plogo--host img{height:23px}
 
 /* section head */
 .shead{max-width:none;margin-bottom:var(--s4)}
