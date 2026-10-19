@@ -360,6 +360,15 @@ a.plogo:hover{transform:none;box-shadow:none;opacity:.6}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.btn:hover{transform:none}}
 </style>
 
+<script>
+/* Puslapis atsidaro nuo viršaus: naršyklė nebeatkuria ankstesnės slinkties pozicijos,
+   dėl kurios atsidarius puslapį vaizdas pats nušokdavo žemyn. Grįžimas „atgal"
+   mygtuku veikia kaip anksčiau — tam naršyklės naudoja bfcache. */
+(function(){
+  try{ if('scrollRestoration' in history){ history.scrollRestoration='manual'; } }catch(e){}
+})();
+</script>
+
 <header class="bar">
   <div class="wrap bar__in">
     <a class="brandlock" href="https://editai.co" target="_blank" rel="noopener" aria-label="EditAI"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 32" fill="none" class="logo" role="img" aria-label="EditAI">
