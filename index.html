@@ -223,6 +223,19 @@ a.plogo:hover{transform:none;box-shadow:none;opacity:.6}
 .dcard h3{font-size:1.08rem;font-weight:600;letter-spacing:-.018em;color:#111111}
 .dcard p{font-size:15px;color:rgba(17,17,17,.7);line-height:1.56;margin-top:8px}
 
+/* how-to video */
+.howto{background:var(--surface-2);border-radius:var(--r-lg);padding:clamp(26px,3.4vw,40px);display:grid;gap:var(--s4);align-items:center}
+@media(min-width:900px){.howto{grid-template-columns:.92fr 1.08fr;gap:var(--s5)}}
+.howto h3{font-size:clamp(1.3rem,2.6vw,1.75rem);font-weight:700;letter-spacing:-.025em;margin-top:12px}
+.howto__p{font-size:15.5px;color:var(--ink-2);line-height:1.58;margin-top:12px}
+.howto__play{display:block;position:relative;border-radius:var(--r-md);overflow:hidden;background:#111111;aspect-ratio:16/9;text-decoration:none;box-shadow:var(--shadow)}
+.howto__play img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s ease,opacity .2s ease}
+.howto__play:hover img{transform:scale(1.02);opacity:.92}
+.howto__btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:74px;border-radius:50%;background:var(--peach);color:#111111;display:flex;align-items:center;justify-content:center;font-size:24px;padding-left:5px;box-shadow:0 10px 30px -10px rgba(17,17,17,.6)}
+.howto__play iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.howto__alt{font-size:13px;color:var(--ink-3);margin-top:12px}
+.howto__alt a{color:var(--peach-ink)}
+
 /* labs */
 .labs{display:grid;gap:14px}
 @media(min-width:780px){.labs{grid-template-columns:1fr 1fr}}
@@ -539,6 +552,23 @@ a.plogo:hover{transform:none;box-shadow:none;opacity:.6}
       <b>Dalykus renkasi mokytojas.</b> Kuriuos mokomuosius dalykus integruoti ir kur pasitelkti
       EditAI — vienoje misijoje, keliose ar visose — sprendžia pats mokytojas.
     </p>
+  </div>
+</section>
+
+<section class="sec" id="pamoka" style="padding-top:0">
+  <div class="wrap">
+    <div class="howto">
+      <div>
+        <p class="label">Vaizdo pamoka mokytojui</p>
+        <h3>Kaip susikurti #MokausiKurti projektą EditAI platformoje</h3>
+        <p class="howto__p">Per kelias minutes parodome, kaip mokytojas susikuria konkursui tinkantį integruotą projektą ir pritaiko jį savo klasei — pasirenka dalykus, temą ir užduočių gylį pagal turimą laiką.</p>
+        <p class="howto__alt">Vaizdo įrašas neatsidaro? <a href="https://youtu.be/vWpoU5UUdKA" target="_blank" rel="noopener">Žiūrėkite per YouTube</a></p>
+      </div>
+      <a class="howto__play" id="pamoka-play" href="https://youtu.be/vWpoU5UUdKA" target="_blank" rel="noopener" aria-label="Paleisti vaizdo pamoką „Kaip sukurti #MokausiKurti projektą su EditAI“">
+        <img src="media/video-pamoka.jpg" alt="EditAI platformos vaizdas – projekto kūrimo langas" loading="lazy" width="1280" height="720">
+        <span class="howto__btn" aria-hidden="true">&#9654;</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -871,6 +901,21 @@ a.plogo:hover{transform:none;box-shadow:none;opacity:.6}
 </footer>
 
 <script>
+(function(){
+  var a=document.getElementById('pamoka-play');
+  if(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/vWpoU5UUdKA?autoplay=1&rel=0&modestbranding=1&hl=lt';
+      f.title='Kaip sukurti #MokausiKurti projektą su EditAI';
+      f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share';
+      f.allowFullscreen=true;
+      a.innerHTML='';
+      a.appendChild(f);
+    });
+  }
+})();
 (function(){
   var v = document.getElementById('vid2025');
   if (!v) return;
